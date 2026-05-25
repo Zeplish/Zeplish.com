@@ -1,0 +1,253 @@
+Create a modern, premium, conversion-focused website for “Zeplish” — a custom AI-powered business software development company for SMEs.
+
+Core positioning:
+Zeplish builds custom AI-powered business software for small and medium businesses that are tired of using spreadsheets, WhatsApp follow-ups, manual tracking, and disconnected tools.
+
+Main headline:
+Custom AI Software for SMEs That Want to Save Time, Reduce Manual Work & Grow Faster
+
+Subheadline:
+We design and build practical AI-powered business applications, dashboards, CRMs, automation systems, and internal tools tailored to your exact workflow — without the complexity of enterprise software.
+
+Website goal:
+Generate leads from SME owners, service businesses, schools, clinics, agencies, consultants, manufacturers, property managers, and local businesses who need custom software but don’t know where to start.
+
+Design style:
+- Premium, clean, trustworthy, modern SaaS agency website
+- Use a white/light background with dark text and one strong accent color
+- Rounded cards, soft shadows, clean icons, smooth sections
+- Mobile responsive
+- Simple animations on scroll
+- Clear CTAs throughout
+- Use professional but simple language, not too technical
+
+Tech stack:
+Use React with Tailwind CSS. Create a polished single-page website with smooth navigation.
+
+Website sections:
+
+1. Hero Section
+Include:
+- Logo text: Zeplish
+- Navigation: Services, Case Studies, Process, Industries, Contact
+- Badge: “AI-powered business software for SMEs”
+- Headline: “We Build Custom AI Software for Businesses That Still Run on Spreadsheets”
+- Supporting text:
+“From document expiry tracking to lead management, staff workflows, billing, reminders, dashboards and AI automation — we build software around the way your business actually works.”
+- Primary CTA: “Book a Free Consultation”
+- Secondary CTA: “See Case Studies”
+- Add a small trust line: “Built for SMEs, service businesses, schools, clinics, agencies and growing teams.”
+
+2. Problem Section
+Title: “Most SMEs Don’t Need More Apps. They Need One System That Fits Their Business.”
+Explain common SME problems:
+- Too much work happening on WhatsApp
+- Excel sheets getting outdated
+- Missed follow-ups and renewals
+- No visibility into team performance
+- Repetitive admin work
+- Customer data scattered everywhere
+- No automated reminders
+- Business owner has to personally track everything
+
+Use 6–8 cards with icons.
+
+3. What We Build Section
+Title: “Custom Software We Can Build for Your Business”
+Create service cards:
+- Custom CRM Systems
+- AI-powered Document Tracking
+- Internal Business Dashboards
+- Lead & Sales Management Systems
+- WhatsApp/SMS/Email Reminder Automation
+- Billing & Invoice Tracking
+- School / Coaching / Training Management Software
+- Property Management Software
+- AI Data Entry from Bills, Forms & PDFs
+- Custom Admin Portals
+
+Each card should have a simple one-line explanation.
+
+4. Featured Case Study: DocTrackr
+Title: “Case Study: DocTrackr”
+Subtitle: “A document expiry and reminder system for a US-based daycare business.”
+
+Describe:
+DocTrackr was built to help a daycare business track employee documents, compliance records, expiry dates, and automatic reminders. Instead of manually checking files and dates, the business now gets a simple dashboard and timely reminders before documents expire.
+
+Include:
+Problem:
+- Documents were being tracked manually
+- Expiry dates could be missed
+- Staff compliance was difficult to monitor
+- Follow-ups were time-consuming
+
+Solution:
+- Custom dashboard
+- Document database
+- Expiry date tracking
+- Automated SMS/email reminders
+- Staff-wise document status
+- Admin-friendly interface
+
+Outcome:
+- Less manual tracking
+- Better compliance visibility
+- Reduced missed renewals
+- Owner saves time every week
+
+CTA: “Build something like this for my business”
+
+5. More Case Studies Section
+Title: “Software Ideas We Can Build for Businesses Like Yours”
+Create 8 relatable case study cards. These should feel real and practical, not fake exaggerated results.
+
+Case Study 1: LeadFlow CRM for a Real Estate Consultant
+Problem: Leads from calls, WhatsApp and ads were scattered.
+Solution: Custom CRM with lead status, follow-up reminders, property matching and team assignment.
+Outcome: Faster follow-ups and better lead visibility.
+
+Case Study 2: ClinicOps for a Small Clinic
+Problem: Appointments, patient follow-ups and reports were handled manually.
+Solution: Appointment dashboard, patient records, reminders and prescription upload system.
+Outcome: Reduced missed appointments and smoother clinic operations.
+
+Case Study 3: SchoolTrack for a Coaching Institute
+Problem: Fee records, student enquiries and batch management were spread across registers and Excel.
+Solution: Student CRM, fee tracking, attendance, batch management and parent reminders.
+Outcome: Cleaner administration and easier student tracking.
+
+Case Study 4: RentWise for a Property Manager
+Problem: Multiple properties, tenants, rent dates and maintenance issues were hard to manage.
+Solution: Property dashboard, tenant records, rent reminders and maintenance ticketing.
+Outcome: Better rent collection tracking and faster issue resolution.
+
+Case Study 5: BillSnap AI for a Trading Business
+Problem: Bills and purchase entries were manually typed into spreadsheets.
+Solution: AI bill scanning, data extraction, vendor records and monthly reports.
+Outcome: Reduced manual data entry and faster reporting.
+
+Case Study 6: ServiceDesk for a Repair Business
+Problem: Customer complaints and technician assignments were managed on WhatsApp.
+Solution: Ticket system, technician dashboard, status updates and customer notifications.
+Outcome: Better service tracking and fewer missed complaints.
+
+Case Study 7: TeamPulse for a Small Agency
+Problem: Tasks, client work and deadlines were scattered across chats and tools.
+Solution: Custom project dashboard, task assignment, deadline alerts and client-wise progress tracking.
+Outcome: Better team accountability and project visibility.
+
+Case Study 8: StockTrack for a Small Manufacturer
+Problem: Inventory, orders and production updates were not visible in one place.
+Solution: Inventory dashboard, order tracking, low-stock alerts and production status updates.
+Outcome: Better stock planning and fewer operational delays.
+
+Each case study card should include:
+- Industry
+- Problem
+- Custom solution
+- Result
+
+Add a note below:
+“These are examples of the type of custom systems Zeplish can build. Every business workflow is different, so we design the software around your exact process.”
+
+6. Process Section
+Title: “How We Build Your Custom Software”
+Use 5 steps:
+1. Discovery Call
+We understand your business process, pain points and current tools.
+2. Workflow Mapping
+We convert your manual process into a clear software flow.
+3. Prototype
+We show you screens and user journey before full development.
+4. Development
+We build the application with dashboards, database, automations and AI features.
+5. Launch & Support
+We deploy, test, train your team and improve based on feedback.
+
+7. AI Features Section
+Title: “Practical AI Features for Real Businesses”
+Include cards:
+- AI document reading
+- AI bill and invoice extraction
+- AI customer support assistant
+- AI report generation
+- AI lead scoring
+- AI search inside company documents
+- AI follow-up suggestions
+- AI dashboard summaries
+
+Make it clear:
+“We don’t add AI for hype. We add AI where it saves time, reduces errors or improves decisions.”
+
+8. Industries Section
+Title: “Who We Help”
+Include:
+- Schools and coaching institutes
+- Clinics and healthcare providers
+- Daycare and childcare businesses
+- Real estate consultants
+- Property managers
+- Local service businesses
+- Agencies and consultants
+- Manufacturers and traders
+- Gyms and wellness centers
+- SMEs with manual operations
+
+9. Why Zeplish Section
+Title: “Why Businesses Choose Zeplish”
+Points:
+- Built around your workflow
+- Simple enough for your team to actually use
+- No unnecessary enterprise complexity
+- AI where it genuinely helps
+- Fast MVP development
+- Scalable database-backed applications
+- Clean dashboards and admin panels
+- Support after launch
+
+10. CTA Section
+Title: “Have a Business Process You Want to Automate?”
+Text:
+“If your business is still depending on Excel, WhatsApp, manual reminders or disconnected tools, Zeplish can help you build a custom system that saves time and improves control.”
+
+CTA button:
+“Book a Free Consultation”
+
+Secondary text:
+“Tell us your business problem. We’ll suggest what software can be built.”
+
+11. Contact Section
+Create a contact form with:
+- Name
+- Business name
+- Email
+- Phone
+- What do you want to build?
+- Submit button
+
+Also add:
+Email: hello@zeplish.com
+Website: zeplish.com
+
+12. Footer
+Include:
+Zeplish
+“Custom AI-powered business software for SMEs.”
+Links:
+Services, Case Studies, Process, Contact
+Copyright text.
+
+Important copywriting style:
+- Make the language simple and practical
+- Avoid buzzwords like “digital transformation” unless necessary
+- Make SME owners feel understood
+- Focus on saving time, reducing manual work, avoiding missed follow-ups, improving business visibility and making operations easier
+- The site should feel like Zeplish can build serious custom business tools without sounding like a huge expensive IT company
+
+Add sample testimonials section if it fits:
+- “Zeplish helped us replace manual tracking with a simple software system.”
+- “The dashboard gave us visibility we never had before.”
+- “Our follow-ups became easier and more organized.”
+
+Make the final website polished, responsive, and ready to deploy.
