@@ -11,7 +11,7 @@ const ContactBody = z.object({
 });
 
 interface VercelRequest extends IncomingMessage {
-  body: unknown;
+  body: Record<string, unknown>;
 }
 
 const transporter = nodemailer.createTransport({
@@ -20,11 +20,11 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "hello@zeplish.com",
-    pass: process.env.ZOHO_SMTP_PASSWORD,
+    pass: process.env["ZOHO_SMTP_PASSWORD"],
   },
 });
 
-export default async function handler(req: VercelRequest, res: ServerResponse) {
+export default async function handler(req: VercelRequest, res: ServerResponse): Promise<void> {
   res.setHeader("Content-Type", "application/json");
 
   if (req.method !== "POST") {
