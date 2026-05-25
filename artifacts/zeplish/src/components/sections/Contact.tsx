@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -14,7 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Mail, Globe } from "lucide-react";
+import { Mail, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -24,10 +25,13 @@ const formSchema = z.object({
   message: z.string().min(10, "Please tell us what you want to build"),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export function Contact() {
   const { toast } = useToast();
-  
-  const form = useForm<z.infer<typeof formSchema>>({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -38,13 +42,34 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours to schedule a consultation.",
-    });
-    form.reset();
+  async function onSubmit(values: FormValues) {
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours to schedule a free discovery call.",
+      });
+      form.reset();
+    } catch (err) {
+      toast({
+        title: "Failed to send message",
+        description: err instanceof Error ? err.message : "Please try again or email us directly at hello@zeplish.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -63,7 +88,7 @@ export function Contact() {
             <p className="text-lg text-muted-foreground mb-12">
               Fill out the form and we'll reach out to schedule a free discovery call. No hard sell, just a practical discussion about your workflows.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 bg-muted rounded-full flex items-center justify-center">
@@ -71,16 +96,13 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Email</p>
-                  <p className="font-semibold">hello@zeplish.com</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 bg-muted rounded-full flex items-center justify-center">
-                  <Globe className="h-5 w-5 text-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Website</p>
-                  <p className="font-semibold">zeplish.com</p>
+                  <a
+                    href="mailto:hello@zeplish.com"
+                    className="font-semibold hover:underline"
+                    data-testid="link-contact-email"
+                  >
+                    hello@zeplish.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -94,7 +116,7 @@ export function Contact() {
             className="bg-card border rounded-2xl p-8 shadow-sm"
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="form-contact">
                 <FormField
                   control={form.control}
                   name="name"
@@ -102,7 +124,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Name *</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input placeholder="John Doe" data-testid="input-name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -115,7 +137,7 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>Business Name *</FormLabel>
                       <FormControl>
-                        <Input placeholder="Acme Logistics" {...field} />
+                        <Input placeholder="Acme Logistics" data-testid="input-business-name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -129,7 +151,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>Email *</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@example.com" {...field} />
+                          <Input placeholder="john@example.com" data-testid="input-email" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -142,7 +164,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel>Phone</FormLabel>
                         <FormControl>
-                          <Input placeholder="+1 (555) 000-0000" {...field} />
+                          <Input placeholder="+1 (555) 000-0000" data-testid="input-phone" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -156,18 +178,31 @@ export function Contact() {
                     <FormItem>
                       <FormLabel>What do you want to build? *</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Tell us about your current process and what you want to automate..." 
+                        <Textarea
+                          placeholder="Tell us about your current process and what you want to automate..."
                           className="min-h-[120px]"
-                          {...field} 
+                          data-testid="textarea-message"
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base">
-                  Send Message
+                <Button
+                  type="submit"
+                  className="w-full h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base"
+                  disabled={isSubmitting}
+                  data-testid="button-submit"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </Form>
