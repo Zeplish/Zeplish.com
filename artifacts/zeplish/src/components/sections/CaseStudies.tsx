@@ -65,7 +65,7 @@ export function CaseStudies() {
   return (
     <section className="py-24 bg-muted/30" id="case-studies">
       <div className="container mx-auto px-4 md:px-8">
-        
+
         {/* Featured Case Study */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,62 +75,68 @@ export function CaseStudies() {
           className="max-w-5xl mx-auto bg-card border rounded-3xl overflow-hidden shadow-xl mb-32"
         >
           <div className="grid md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center min-w-0">
               <div className="inline-flex items-center rounded-full bg-accent/10 text-accent px-3 py-1 text-sm font-medium mb-6 w-fit">
                 Featured Case Study
               </div>
-              <h3 className="text-3xl font-bold font-heading mb-2">DocTrackr</h3>
-              <p className="text-lg text-muted-foreground mb-8">Document expiry tracking system for a US-based daycare business.</p>
-              
-              <div className="space-y-6 mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold font-heading mb-2">DocTrackr</h3>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
+                Document expiry tracking system for a US-based daycare business.
+              </p>
+
+              <div className="space-y-5 mb-6 sm:mb-8">
                 <div>
                   <h4 className="font-semibold mb-2">The Problem</h4>
-                  <p className="text-muted-foreground">Documents tracked manually, expiry dates missed, staff compliance hard to monitor, follow-ups time-consuming.</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    Documents tracked manually, expiry dates missed, staff compliance hard to monitor, follow-ups time-consuming.
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">The Solution</h4>
-                  <p className="text-muted-foreground">Custom dashboard, document database, expiry date tracking, automated SMS/email reminders, staff-wise document status, admin-friendly interface.</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    Custom dashboard, document database, expiry date tracking, automated SMS/email reminders, staff-wise document status, admin-friendly interface.
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2 text-accent">The Outcome</h4>
                   <ul className="space-y-2">
                     {["Less manual tracking", "Better compliance visibility", "Reduced missed renewals", "Owner saves time every week"].map((item, i) => (
-                      <li key={i} className="flex items-center text-muted-foreground">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                      <li key={i} className="flex items-center text-sm sm:text-base text-muted-foreground">
+                        <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-accent mr-3 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-              
-              <Button 
+
+              <Button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-fit bg-accent text-accent-foreground hover:bg-accent/90 group"
+                className="w-full sm:w-fit bg-accent text-accent-foreground hover:bg-accent/90 group text-sm"
               >
-                Build something like this for my business
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                Build something like this
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </div>
             <div className="bg-muted hidden md:flex items-center justify-center p-8">
-               <div className="w-full aspect-[4/3] bg-background rounded-xl border shadow-sm flex flex-col overflow-hidden">
-                 <div className="h-10 border-b bg-muted/50 flex items-center px-4 gap-2">
-                   <div className="flex gap-1.5">
-                     <div className="h-3 w-3 rounded-full bg-destructive/50" />
-                     <div className="h-3 w-3 rounded-full bg-amber-400/50" />
-                     <div className="h-3 w-3 rounded-full bg-emerald-400/50" />
-                   </div>
-                 </div>
-                 <div className="p-6 flex-1 flex flex-col gap-4">
-                   <div className="h-8 w-1/3 bg-muted rounded-md mb-4" />
-                   <div className="grid grid-cols-3 gap-4 mb-4">
-                     <div className="h-24 bg-accent/5 rounded-lg border border-accent/20" />
-                     <div className="h-24 bg-muted rounded-lg border" />
-                     <div className="h-24 bg-muted rounded-lg border" />
-                   </div>
-                   <div className="flex-1 bg-muted/50 rounded-lg border" />
-                 </div>
-               </div>
+              <div className="w-full aspect-[4/3] bg-background rounded-xl border shadow-sm flex flex-col overflow-hidden">
+                <div className="h-10 border-b bg-muted/50 flex items-center px-4 gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="h-3 w-3 rounded-full bg-destructive/50" />
+                    <div className="h-3 w-3 rounded-full bg-amber-400/50" />
+                    <div className="h-3 w-3 rounded-full bg-accent/50" />
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col gap-4">
+                  <div className="h-8 w-1/3 bg-muted rounded-md mb-4" />
+                  <div className="grid grid-cols-3 gap-4 mb-4">
+                    <div className="h-24 bg-accent/5 rounded-lg border border-accent/20" />
+                    <div className="h-24 bg-muted rounded-lg border" />
+                    <div className="h-24 bg-muted rounded-lg border" />
+                  </div>
+                  <div className="flex-1 bg-muted/50 rounded-lg border" />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -163,7 +169,7 @@ export function CaseStudies() {
                   <h3 className="font-bold text-lg">{study.name}</h3>
                   <span className="text-xs font-medium text-accent uppercase tracking-wider">{study.industry}</span>
                 </div>
-                
+
                 <div className="space-y-4 text-sm">
                   <div>
                     <span className="font-semibold block mb-1">Problem:</span>
