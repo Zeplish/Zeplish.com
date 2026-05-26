@@ -1,0 +1,219 @@
+{
+  "site": {
+    "name": "Zeplish",
+    "tagline": "Custom AI-powered business software for SMEs. We build software around the way your business actually works.",
+    "email": "hello@zeplish.com",
+    "url": "zeplish.com",
+    "copyright": "© 2025 Zeplish. All rights reserved."
+  },
+  "seo": {
+    "title": "Zeplish — Custom AI Business Software for SMEs",
+    "description": "Zeplish builds custom AI-powered software for small and medium businesses. CRMs, dashboards, document tracking, billing, reminders and automation — built around your exact workflow.",
+    "ogDescription": "Tired of spreadsheets, WhatsApp follow-ups and manual tracking? Zeplish builds custom AI-powered business software tailored to how your SME actually works.",
+    "twitterDescription": "Custom AI software for SMEs. CRMs, dashboards, automation and more — built around your exact workflow. Book a free consultation."
+  },
+  "nav": {
+    "links": [
+      { "label": "Services", "id": "services" },
+      { "label": "Case Studies", "id": "case-studies" },
+      { "label": "Process", "id": "process" },
+      { "label": "Industries", "id": "industries" },
+      { "label": "Contact", "id": "contact" }
+    ],
+    "cta": "Book a Free Consultation"
+  },
+  "hero": {
+    "badge": "AI-powered business software for SMEs",
+    "headline": "We Build Custom AI Software for Businesses That Still Run on Spreadsheets",
+    "subheadline": "From document expiry tracking to lead management, staff workflows, billing, reminders, dashboards and AI automation — we build software around the way your business actually works.",
+    "ctaPrimary": "Book a Free Consultation",
+    "ctaSecondary": "See Case Studies",
+    "trustLine": "Built for SMEs, service businesses, schools, clinics, agencies and growing teams."
+  },
+  "problem": {
+    "title": "Most SMEs Don't Need More Apps.",
+    "subtitle": "They Need One System That Fits Their Business.",
+    "items": [
+      "Too much work happening on WhatsApp",
+      "Excel sheets getting outdated",
+      "Missed follow-ups and renewals",
+      "No visibility into team performance",
+      "Repetitive admin work consuming hours",
+      "Customer data scattered everywhere",
+      "No automated reminders",
+      "Business owner personally tracking everything"
+    ]
+  },
+  "services": {
+    "title": "Custom Software We Can Build for Your Business",
+    "items": [
+      { "title": "Custom CRM Systems", "desc": "Track customers, leads and follow-ups in one place" },
+      { "title": "AI-powered Document Tracking", "desc": "Automate expiry dates, renewals and compliance" },
+      { "title": "Internal Business Dashboards", "desc": "See your operations at a glance" },
+      { "title": "Lead & Sales Management", "desc": "Manage leads from every channel in one flow" },
+      { "title": "WhatsApp/SMS/Email Reminders", "desc": "Send automated reminders to staff and customers" },
+      { "title": "Billing & Invoice Tracking", "desc": "Track payments, invoices and outstanding amounts" },
+      { "title": "School / Training Management", "desc": "Manage students, fees, batches and attendance" },
+      { "title": "Property Management Software", "desc": "Handle properties, tenants and rent in one system" },
+      { "title": "AI Data Entry from Bills & PDFs", "desc": "Extract data from documents automatically" },
+      { "title": "Custom Admin Portals", "desc": "Build internal tools for your specific business ops" }
+    ]
+  },
+  "featuredCaseStudy": {
+    "badge": "Featured Case Study",
+    "name": "DocTrackr",
+    "subtitle": "Document expiry tracking system for a US-based daycare business.",
+    "problem": "Documents tracked manually, expiry dates missed, staff compliance hard to monitor, follow-ups time-consuming.",
+    "solution": "Custom dashboard, document database, expiry date tracking, automated SMS/email reminders, staff-wise document status, admin-friendly interface.",
+    "outcomes": [
+      "Less manual tracking",
+      "Better compliance visibility",
+      "Reduced missed renewals",
+      "Owner saves time every week"
+    ],
+    "cta": "Build something like this"
+  },
+  "caseStudies": {
+    "title": "Software Ideas We Can Build for Businesses Like Yours",
+    "note": "These are examples of the type of custom systems Zeplish can build. Every business workflow is different — we design the software around your exact process.",
+    "items": [
+      {
+        "name": "LeadFlow CRM",
+        "industry": "Real Estate",
+        "problem": "Leads from calls, WhatsApp, ads scattered",
+        "solution": "CRM with lead status, follow-up reminders, property matching, team assignment",
+        "result": "Faster follow-ups and better lead visibility"
+      },
+      {
+        "name": "ClinicOps",
+        "industry": "Small Clinic",
+        "problem": "Appointments, patient follow-ups, reports handled manually",
+        "solution": "Appointment dashboard, patient records, reminders, prescription upload",
+        "result": "Reduced missed appointments, smoother clinic operations"
+      },
+      {
+        "name": "SchoolTrack",
+        "industry": "Coaching Institute",
+        "problem": "Fee records, student enquiries, batch management in registers and Excel",
+        "solution": "Student CRM, fee tracking, attendance, batch management, parent reminders",
+        "result": "Cleaner administration, easier student tracking"
+      },
+      {
+        "name": "RentWise",
+        "industry": "Property Manager",
+        "problem": "Multiple properties, tenants, rent dates, maintenance hard to manage",
+        "solution": "Property dashboard, tenant records, rent reminders, maintenance ticketing",
+        "result": "Better rent collection tracking, faster issue resolution"
+      },
+      {
+        "name": "BillSnap AI",
+        "industry": "Trading Business",
+        "problem": "Bills and purchases manually typed into spreadsheets",
+        "solution": "AI bill scanning, data extraction, vendor records, monthly reports",
+        "result": "Reduced manual data entry, faster reporting"
+      },
+      {
+        "name": "ServiceDesk",
+        "industry": "Repair Business",
+        "problem": "Customer complaints and technician assignments on WhatsApp",
+        "solution": "Ticket system, technician dashboard, status updates, customer notifications",
+        "result": "Better service tracking, fewer missed complaints"
+      },
+      {
+        "name": "TeamPulse",
+        "industry": "Small Agency",
+        "problem": "Tasks, client work, deadlines scattered across chats",
+        "solution": "Project dashboard, task assignment, deadline alerts, client-wise progress",
+        "result": "Better team accountability, clearer project visibility"
+      },
+      {
+        "name": "StockTrack",
+        "industry": "Manufacturer",
+        "problem": "Inventory, orders, production updates not in one place",
+        "solution": "Inventory dashboard, order tracking, low-stock alerts, production status",
+        "result": "Better stock planning, fewer operational delays"
+      }
+    ]
+  },
+  "process": {
+    "title": "How We Build Your Custom Software",
+    "steps": [
+      { "title": "Discovery Call", "desc": "We understand your business process, pain points and current tools." },
+      { "title": "Workflow Mapping", "desc": "We convert your manual process into a clear software flow." },
+      { "title": "Prototype", "desc": "We show you screens and user journey before full development." },
+      { "title": "Development", "desc": "We build the application with dashboards, database, automations and AI features." },
+      { "title": "Launch & Support", "desc": "We deploy, test, train your team and improve based on feedback." }
+    ]
+  },
+  "aiFeatures": {
+    "title": "Practical AI Features for Real Businesses",
+    "note": "We don't add AI for hype. We add AI where it saves time, reduces errors or improves decisions.",
+    "items": [
+      "AI document reading",
+      "AI bill and invoice extraction",
+      "AI customer support assistant",
+      "AI report generation",
+      "AI lead scoring",
+      "AI search inside company documents",
+      "AI follow-up suggestions",
+      "AI dashboard summaries"
+    ]
+  },
+  "industries": {
+    "title": "Who We Help",
+    "items": [
+      "Schools and coaching institutes",
+      "Clinics and healthcare providers",
+      "Daycare and childcare businesses",
+      "Real estate consultants",
+      "Property managers",
+      "Local service businesses",
+      "Agencies and consultants",
+      "Manufacturers and traders",
+      "Gyms and wellness centers",
+      "SMEs with manual operations"
+    ]
+  },
+  "whyUs": {
+    "title": "Why Businesses Choose Zeplish",
+    "points": [
+      "Built around your workflow",
+      "Simple enough for your team to actually use",
+      "No unnecessary enterprise complexity",
+      "AI where it genuinely helps",
+      "Fast MVP development",
+      "Scalable database-backed applications",
+      "Clean dashboards and admin panels",
+      "Support after launch"
+    ]
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "Zeplish helped us replace manual tracking with a simple software system.",
+        "author": "Operations Manager",
+        "company": "Daycare Business"
+      },
+      {
+        "quote": "The dashboard gave us visibility we never had before.",
+        "author": "Founder",
+        "company": "Real Estate Agency"
+      },
+      {
+        "quote": "Our follow-ups became easier and more organized.",
+        "author": "Director",
+        "company": "Coaching Institute"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Have a Business Process You Want to Automate?",
+    "text": "If your business is still depending on Excel, WhatsApp, manual reminders or disconnected tools, Zeplish can help you build a custom system that saves time and improves control.",
+    "button": "Book a Free Consultation",
+    "subtext": "Tell us your business problem. We'll suggest what software can be built."
+  },
+  "contact": {
+    "title": "Let's Talk About Your Business.",
+    "text": "Fill out the form and we'll reach out to schedule a free discovery call. No hard sell, just a practical discussion about your workflows."
+  }
+}
