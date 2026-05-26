@@ -24,15 +24,15 @@
   },
   "hero": {
     "badge": "AI-powered business software for SMEs",
-    "headline": "We Build Custom AI Software for Businesses That Still Run on Spreadsheets",
+    "headline": "We build custom AI software for businesses that still run on spreadsheets",
     "subheadline": "From document expiry tracking to lead management, staff workflows, billing, reminders, dashboards and AI automation — we build software around the way your business actually works.",
     "ctaPrimary": "Book a Free Consultation",
     "ctaSecondary": "See Case Studies",
     "trustLine": "Built for SMEs, service businesses, schools, clinics, agencies and growing teams."
   },
   "problem": {
-    "title": "Most SMEs Don't Need More Apps.",
-    "subtitle": "They Need One System That Fits Their Business.",
+    "title": "Most SMEs don't need more apps.",
+    "subtitle": "They need one system that fits their business.",
     "items": [
       "Too much work happening on WhatsApp",
       "Excel sheets getting outdated",
@@ -45,7 +45,7 @@
     ]
   },
   "services": {
-    "title": "Custom Software We Can Build for Your Business",
+    "title": "Custom software we can build for your business",
     "items": [
       { "title": "Custom CRM Systems", "desc": "Track customers, leads and follow-ups in one place" },
       { "title": "AI-powered Document Tracking", "desc": "Automate expiry dates, renewals and compliance" },
@@ -74,7 +74,7 @@
     "cta": "Build something like this"
   },
   "caseStudies": {
-    "title": "Software Ideas We Can Build for Businesses Like Yours",
+    "title": "Software ideas we can build for businesses like yours",
     "note": "These are examples of the type of custom systems Zeplish can build. Every business workflow is different — we design the software around your exact process.",
     "items": [
       {
@@ -136,7 +136,7 @@
     ]
   },
   "process": {
-    "title": "How We Build Your Custom Software",
+    "title": "How we build your custom software",
     "steps": [
       { "title": "Discovery Call", "desc": "We understand your business process, pain points and current tools." },
       { "title": "Workflow Mapping", "desc": "We convert your manual process into a clear software flow." },
@@ -146,7 +146,7 @@
     ]
   },
   "aiFeatures": {
-    "title": "Practical AI Features for Real Businesses",
+    "title": "Practical AI features for real businesses",
     "note": "We don't add AI for hype. We add AI where it saves time, reduces errors or improves decisions.",
     "items": [
       "AI document reading",
@@ -160,7 +160,7 @@
     ]
   },
   "industries": {
-    "title": "Who We Help",
+    "title": "Who we help",
     "items": [
       "Schools and coaching institutes",
       "Clinics and healthcare providers",
@@ -175,7 +175,7 @@
     ]
   },
   "whyUs": {
-    "title": "Why Businesses Choose Zeplish",
+    "title": "Why businesses choose Zeplish",
     "points": [
       "Built around your workflow",
       "Simple enough for your team to actually use",
@@ -207,13 +207,13 @@
     ]
   },
   "cta": {
-    "title": "Have a Business Process You Want to Automate?",
+    "title": "Have a business process you want to automate?",
     "text": "If your business is still depending on Excel, WhatsApp, manual reminders or disconnected tools, Zeplish can help you build a custom system that saves time and improves control.",
     "button": "Book a Free Consultation",
     "subtext": "Tell us your business problem. We'll suggest what software can be built."
   },
   "contact": {
-    "title": "Let's Talk About Your Business.",
+    "title": "Let's talk about your business.",
     "text": "Fill out the form and we'll reach out to schedule a free discovery call. No hard sell, just a practical discussion about your workflows."
   }
 }

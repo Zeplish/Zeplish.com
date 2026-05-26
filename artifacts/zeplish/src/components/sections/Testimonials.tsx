@@ -14,7 +14,7 @@ export function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold font-heading">
-            What Our Clients Say
+            What our clients say
           </h2>
         </motion.div>
 
