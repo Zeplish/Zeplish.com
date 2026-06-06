@@ -1,9 +1,17 @@
+import { useLocation } from "wouter";
 import content from "@/content.json";
 
 export function Footer() {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+  const [location] = useLocation();
+  const isHome = location === "/";
+
+  const handleNavLink = (id: string) => {
+    if (isHome) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = `/#${id}`;
+    }
   };
 
   return (
@@ -26,7 +34,7 @@ export function Footer() {
               {content.nav.links.map((link) => (
                 <li key={link.id}>
                   <button
-                    onClick={() => scrollTo(link.id)}
+                    onClick={() => handleNavLink(link.id)}
                     className="text-background/70 hover:text-white transition-colors text-sm"
                   >
                     {link.label}

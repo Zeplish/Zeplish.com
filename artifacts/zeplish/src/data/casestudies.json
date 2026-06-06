@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "doctrackr",
+    "name": "DocTrackr",
+    "badge": "Featured Case Study",
+    "industry": "Childcare / Daycare",
+    "liveUrl": "https://doctrackr.zeplish.com",
+    "hero": {
+      "headline": "Document compliance, without the chaos.",
+      "subheadline": "Track expiring documents for every student and employee — and stay ahead of renewals automatically.",
+      "tagline": "DayCare Simplified"
+    },
+    "subtitle": "Document expiry tracking system for a US-based daycare business.",
+    "problem": "Documents tracked manually across spreadsheets and email. Expiry dates were missed, staff compliance was hard to monitor, and follow-ups were time-consuming for the owner.",
+    "solution": "Custom dashboard with a full document database, per-employee and per-student document status, automated SMS and email reminders before expiry, and an admin-friendly interface the owner can manage without technical help.",
+    "features": [
+      {
+        "icon": "Bell",
+        "title": "Automated Reminders",
+        "desc": "Email and SMS alerts before documents expire — no manual follow-up needed."
+      },
+      {
+        "icon": "FileText",
+        "title": "Document Tracking",
+        "desc": "Expiry dates, reminder history, and document status for every person on file."
+      },
+      {
+        "icon": "LayoutDashboard",
+        "title": "Status Dashboard",
+        "desc": "Overdue, missing, expiring, and active documents visible at a glance."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Compliance Reports",
+        "desc": "Full audit trail and status views for students and employees."
+      }
+    ],
+    "outcomes": [
+      "Less manual tracking — the system monitors expiry dates automatically",
+      "Better compliance visibility across all students and employees",
+      "Reduced missed renewals with automated advance reminders",
+      "Owner saves hours every week previously spent on manual follow-ups"
+    ],
+    "images": [
+      {
+        "key": "login",
+        "alt": "DocTrackr login page showing the product landing screen",
+        "caption": "Landing & Login"
+      },
+      {
+        "key": "dashboard",
+        "alt": "DocTrackr dashboard showing document status overview",
+        "caption": "Compliance Dashboard"
+      },
+      {
+        "key": "document-types",
+        "alt": "DocTrackr document types management screen",
+        "caption": "Document Management"
+      }
+    ],
+    "techHighlights": [
+      "Custom dashboard",
+      "Document database",
+      "SMS & email reminders",
+      "Role-based access",
+      "Compliance reporting"
+    ],
+    "cta": "Build something like this"
+  }
+]

@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, ExternalLink } from "lucide-react";
+import { useLocation } from "wouter";
 import content from "@/content.json";
 
 const { featuredCaseStudy: featured, caseStudies } = content;
 
 export function CaseStudies() {
+  const [, navigate] = useLocation();
+
   return (
     <section className="py-24 bg-slate-50" id="case-studies">
       <div className="container mx-auto px-4 md:px-8">
@@ -50,13 +53,23 @@ export function CaseStudies() {
                 </div>
               </div>
 
-              <Button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-fit bg-accent text-accent-foreground hover:bg-accent/90 group text-sm"
-              >
-                {featured.cta}
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  onClick={() => navigate("/doctrackr")}
+                  variant="outline"
+                  className="w-full sm:w-fit group text-sm border-foreground/20"
+                >
+                  View case study
+                  <ExternalLink className="ml-2 h-4 w-4 flex-shrink-0" />
+                </Button>
+                <Button
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="w-full sm:w-fit bg-accent text-accent-foreground hover:bg-accent/90 group text-sm"
+                >
+                  {featured.cta}
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                </Button>
+              </div>
             </div>
             <div className="bg-slate-50 hidden md:flex items-center justify-center p-8">
               <div className="w-full aspect-[4/3] bg-white rounded-xl border shadow-sm flex flex-col overflow-hidden">
