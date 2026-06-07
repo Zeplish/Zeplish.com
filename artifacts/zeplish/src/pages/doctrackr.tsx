@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Bell, FileText, LayoutDashboard, ClipboardList, CheckCircle2, ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,10 @@ const screenshots = [
 
 export function DocTrackrPage() {
   const [, navigate] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleContact = () => {
     window.location.href = "/#contact";
@@ -291,7 +296,7 @@ export function DocTrackrPage() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => { window.location.href = "/#case-studies"; }}
                 className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white transition-colors text-sm h-12"
               >
                 See more work
