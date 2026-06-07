@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -13,6 +14,20 @@ import { CTA } from "@/components/sections/CTA";
 import { Contact } from "@/components/sections/Contact";
 
 export function Home() {
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const attempt = (tries: number) => {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else if (tries > 0) {
+        setTimeout(() => attempt(tries - 1), 100);
+      }
+    };
+    attempt(10);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-accent/20">
       <Navbar />
