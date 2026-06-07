@@ -132,8 +132,16 @@ export function CaseStudies() {
                     <span className="font-semibold block mb-0.5 text-slate-500 text-xs uppercase tracking-wide">Solution</span>
                     <span className="text-muted-foreground">{study.solution}</span>
                   </div>
-                  <div className="pt-3 border-t border-slate-100">
-                    <span className="font-semibold block text-foreground/90 font-medium">{study.result}</span>
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                    <span className="font-semibold text-foreground/90">{study.result}</span>
+                    {"slug" in study && study.slug && (
+                      <button
+                        onClick={() => navigate(`/${study.slug}`)}
+                        className="flex-shrink-0 text-xs font-semibold text-accent hover:underline whitespace-nowrap"
+                      >
+                        View product →
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>

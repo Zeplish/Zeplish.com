@@ -86,10 +86,11 @@
       },
       {
         "name": "ClinicOps",
-        "industry": "Small Clinic",
-        "problem": "Appointments, patient follow-ups, reports handled manually",
-        "solution": "Appointment dashboard, patient records, reminders, prescription upload",
-        "result": "Reduced missed appointments, smoother clinic operations"
+        "slug": "clinicops",
+        "industry": "Medical Practice · US",
+        "problem": "Appointments, patient follow-ups and compliance documents tracked manually across calls, notebooks and email",
+        "solution": "Appointment dashboard, patient records, automated SMS reminders, document uploads, front-desk efficiency tools",
+        "result": "Fewer no-shows, less admin time, full patient visibility"
       },
       {
         "name": "SchoolTrack",
@@ -100,17 +101,19 @@
       },
       {
         "name": "RentWise",
-        "industry": "Property Manager",
-        "problem": "Multiple properties, tenants, rent dates, maintenance hard to manage",
-        "solution": "Property dashboard, tenant records, rent reminders, maintenance ticketing",
-        "result": "Better rent collection tracking, faster issue resolution"
+        "slug": "rentwise",
+        "industry": "Landlords & Airbnb Hosts · US",
+        "problem": "Multiple properties, tenants, rent dates and maintenance requests managed over text and spreadsheets",
+        "solution": "Property dashboard, tenant records, automated rent reminders, maintenance ticketing — one system for all units",
+        "result": "Less late rent, no lost maintenance requests, full portfolio visibility"
       },
       {
         "name": "BillSnap AI",
-        "industry": "Trading Business",
-        "problem": "Bills and purchases manually typed into spreadsheets",
-        "solution": "AI bill scanning, data extraction, vendor records, monthly reports",
-        "result": "Reduced manual data entry, faster reporting"
+        "slug": "billsnap",
+        "industry": "Any US Business",
+        "problem": "Bills and receipts manually entered into spreadsheets — hours lost every week, tax season a nightmare",
+        "solution": "AI scans any bill or receipt, extracts data automatically, exports to QuickBooks — zero manual entry",
+        "result": "Hours saved weekly, bookkeeper costs reduced, one-click tax exports"
       },
       {
         "name": "ServiceDesk",
