@@ -161,7 +161,7 @@ export function CaseStudies() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 max-w-2xl mx-auto"
         >
-          <h3 className="text-xl font-bold font-heading mb-2">More ideas we can build</h3>
+          <h3 className="text-2xl font-bold font-heading mb-2">More ideas we can build</h3>
           <p className="text-muted-foreground text-sm">{caseStudies.note}</p>
         </motion.div>
 
@@ -176,16 +176,16 @@ export function CaseStudies() {
               className="bg-white border border-slate-100 rounded-xl p-5 hover:shadow-md hover:border-slate-200 transition-all"
             >
               <div className="mb-3">
-                <h4 className="font-bold text-sm font-heading">{study.name}</h4>
+                <h4 className="font-bold text-base font-heading">{study.name}</h4>
                 <span className="text-xs font-medium text-indigo-600">{study.industry}</span>
               </div>
-              <div className="space-y-2 text-xs text-muted-foreground">
+              <div className="space-y-2 text-sm text-muted-foreground">
                 <p>
-                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-[10px]">Problem · </span>
+                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-xs">Problem · </span>
                   {study.problem}
                 </p>
                 <p>
-                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-[10px]">Solution · </span>
+                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-xs">Solution · </span>
                   {study.solution}
                 </p>
                 <p className="pt-2 border-t border-slate-100 font-medium text-foreground/80">{study.result}</p>

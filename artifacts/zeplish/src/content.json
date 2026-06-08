@@ -135,6 +135,13 @@
         "problem": "Inventory, orders, production updates not in one place",
         "solution": "Inventory dashboard, order tracking, low-stock alerts, production status",
         "result": "Better stock planning, fewer operational delays"
+      },
+      {
+        "name": "ShiftFlow",
+        "industry": "Restaurant & Retail · US",
+        "problem": "Staff shifts managed over group chats with last-minute swaps and no-shows causing chaos",
+        "solution": "Staff scheduling dashboard, shift assignments, swap requests, absence tracking, automated reminders",
+        "result": "Less scheduling chaos, fewer no-shows, better staff accountability"
       }
     ]
   },
