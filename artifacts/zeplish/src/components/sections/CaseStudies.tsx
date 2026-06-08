@@ -1,10 +1,68 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ArrowRight, ExternalLink } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import content from "@/content.json";
 
-const { featuredCaseStudy: featured, caseStudies } = content;
+const { caseStudies } = content;
+
+interface ProductCard {
+  name: string;
+  slug: string;
+  color: string;
+  industry: string;
+  tagline: string;
+  problem: string;
+  outcomes: string[];
+}
+
+const PRODUCT_CARDS: ProductCard[] = [
+  {
+    name: "DocTrackr",
+    slug: "doctrackr",
+    color: "#1a2744",
+    industry: "Daycare · US",
+    tagline: "Document Compliance, Automated",
+    problem: "Documents tracked manually, expiry dates missed, staff compliance hard to monitor, follow-ups time-consuming.",
+    outcomes: [
+      "Less manual tracking",
+      "Better compliance visibility",
+      "Reduced missed renewals",
+      "Owner saves time every week",
+    ],
+  },
+  {
+    name: "ClinicOps",
+    slug: "clinicops",
+    color: "#0a3d62",
+    industry: "Medical Practice · US",
+    tagline: "Practice Management, Simplified",
+    problem: "Appointments, patient follow-ups and compliance documents tracked manually across calls, notebooks and email.",
+    outcomes: ["Fewer no-shows, less admin time, full patient visibility"],
+  },
+  {
+    name: "RentWise",
+    slug: "rentwise",
+    color: "#0d2137",
+    industry: "Landlords & Airbnb Hosts · US",
+    tagline: "Property Management, Under Control",
+    problem: "Multiple properties, tenants, rent dates and maintenance requests managed over text and spreadsheets.",
+    outcomes: ["Less late rent, no lost maintenance requests, full portfolio visibility"],
+  },
+  {
+    name: "BillSnap AI",
+    slug: "billsnap",
+    color: "#3b0fa0",
+    industry: "Any US Business",
+    tagline: "Bills Processed. Automatically.",
+    problem: "Bills and receipts manually entered into spreadsheets — hours lost every week, tax season a nightmare.",
+    outcomes: ["Hours saved weekly, bookkeeper costs reduced, one-click tax exports"],
+  },
+];
+
+const IDEA_ITEMS = caseStudies.items.filter(
+  (item) => !Object.prototype.hasOwnProperty.call(item, "slug")
+);
 
 export function CaseStudies() {
   const [, navigate] = useLocation();
@@ -13,150 +71,129 @@ export function CaseStudies() {
     <section className="py-24 bg-slate-50" id="case-studies">
       <div className="container mx-auto px-4 md:px-8">
 
-        {/* Featured Case Study */}
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto bg-white border rounded-3xl overflow-hidden shadow-xl mb-32"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16 max-w-2xl mx-auto"
         >
-          <div className="grid md:grid-cols-2">
-            <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center min-w-0">
-              <div className="inline-flex items-center rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100 px-3 py-1 text-sm font-medium mb-6 w-fit">
-                {featured.badge}
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold font-heading mb-2">{featured.name}</h3>
-              <p className="text-base text-muted-foreground mb-6">
-                {featured.subtitle}
-              </p>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+            Products we've designed &amp; built
+          </h2>
+          <p className="text-muted-foreground">
+            Real software built for real businesses. Each one started with a conversation about a workflow that wasn't working.
+          </p>
+        </motion.div>
 
-              <div className="space-y-5 mb-6">
-                <div>
-                  <h4 className="font-semibold mb-2 text-sm uppercase tracking-wider text-slate-400">The Problem</h4>
-                  <p className="text-sm text-muted-foreground">{featured.problem}</p>
+        {/* 2×2 product card grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-24">
+          {PRODUCT_CARDS.map((product, index) => (
+            <motion.div
+              key={product.slug}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+              className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition-all"
+            >
+              {/* Colored header */}
+              <div className="px-7 pt-7 pb-6" style={{ backgroundColor: product.color }}>
+                <div className="inline-flex items-center rounded-full bg-white/10 border border-white/20 px-2.5 py-0.5 text-xs text-white/75 mb-4">
+                  {product.industry}
                 </div>
+                <h3 className="text-2xl font-bold font-heading text-white mb-1">
+                  {product.name}
+                </h3>
+                <p className="text-white/55 text-sm">{product.tagline}</p>
+              </div>
+
+              {/* Body */}
+              <div className="px-7 py-6 flex flex-col gap-5">
                 <div>
-                  <h4 className="font-semibold mb-2 text-sm uppercase tracking-wider text-slate-400">The Solution</h4>
-                  <p className="text-sm text-muted-foreground">{featured.solution}</p>
+                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+                    The Problem
+                  </span>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{product.problem}</p>
                 </div>
+
                 <div>
-                  <h4 className="font-semibold mb-2 text-sm uppercase tracking-wider text-slate-400">The Outcome</h4>
-                  <ul className="space-y-2">
-                    {featured.outcomes.map((item, i) => (
-                      <li key={i} className="flex items-center text-sm text-muted-foreground">
-                        <CheckCircle2 className="h-4 w-4 text-accent mr-3 flex-shrink-0" />
-                        {item}
+                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+                    The Outcome
+                  </span>
+                  <ul className="space-y-1.5">
+                    {product.outcomes.map((outcome, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-accent mt-0.5 flex-shrink-0" />
+                        {outcome}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button
-                  onClick={() => navigate("/doctrackr")}
-                  variant="outline"
-                  className="w-full sm:w-fit group text-sm border-foreground/20"
-                >
-                  View case study
-                  <ExternalLink className="ml-2 h-4 w-4 flex-shrink-0" />
-                </Button>
-                <Button
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full sm:w-fit bg-accent text-accent-foreground hover:bg-accent/90 group text-sm"
-                >
-                  {featured.cta}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-                </Button>
-              </div>
-            </div>
-            <div className="bg-slate-50 hidden md:flex items-center justify-center p-8">
-              <div className="w-full aspect-[4/3] bg-white rounded-xl border shadow-sm flex flex-col overflow-hidden">
-                <div className="h-10 border-b bg-slate-50 flex items-center px-4 gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="h-3 w-3 rounded-full bg-rose-300" />
-                    <div className="h-3 w-3 rounded-full bg-amber-300" />
-                    <div className="h-3 w-3 rounded-full bg-green-300" />
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col gap-4">
-                  <div className="h-7 w-1/3 bg-slate-100 rounded-md mb-3" />
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    <div className="h-20 bg-accent/5 rounded-lg border border-accent/20" />
-                    <div className="h-20 bg-slate-50 rounded-lg border" />
-                    <div className="h-20 bg-slate-50 rounded-lg border" />
-                  </div>
-                  <div className="flex-1 bg-slate-50 rounded-lg border" />
+                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                  <button
+                    onClick={() => navigate(`/${product.slug}`)}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-2.5 transition-all"
+                  >
+                    View product
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                  <Button
+                    onClick={() => { window.location.href = "/#contact"; }}
+                    size="sm"
+                    className="bg-accent text-white hover:bg-accent/90 text-xs h-8 px-4"
+                  >
+                    Build something like this
+                  </Button>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Ideas section */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12 max-w-2xl mx-auto"
+        >
+          <h3 className="text-xl font-bold font-heading mb-2">More ideas we can build</h3>
+          <p className="text-muted-foreground text-sm">{caseStudies.note}</p>
         </motion.div>
 
-        {/* More Ideas */}
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold font-heading">
-              {caseStudies.title}
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            {caseStudies.items.map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-lg hover:border-slate-200 transition-all"
-              >
-                <div className="mb-4">
-                  <h3 className="font-bold text-base font-heading">{study.name}</h3>
-                  <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wider">{study.industry}</span>
-                </div>
-
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <span className="font-semibold block mb-0.5 text-slate-500 text-xs uppercase tracking-wide">Problem</span>
-                    <span className="text-muted-foreground">{study.problem}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold block mb-0.5 text-slate-500 text-xs uppercase tracking-wide">Solution</span>
-                    <span className="text-muted-foreground">{study.solution}</span>
-                  </div>
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-                    <span className="font-semibold text-foreground/90">{study.result}</span>
-                    {"slug" in study && study.slug && (
-                      <button
-                        onClick={() => navigate(`/${study.slug}`)}
-                        className="flex-shrink-0 text-xs font-semibold text-accent hover:underline whitespace-nowrap"
-                      >
-                        View product →
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-muted-foreground text-sm max-w-2xl mx-auto"
-          >
-            {caseStudies.note}
-          </motion.p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          {IDEA_ITEMS.map((study, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.07 }}
+              className="bg-white border border-slate-100 rounded-xl p-5 hover:shadow-md hover:border-slate-200 transition-all"
+            >
+              <div className="mb-3">
+                <h4 className="font-bold text-sm font-heading">{study.name}</h4>
+                <span className="text-xs font-medium text-indigo-600">{study.industry}</span>
+              </div>
+              <div className="space-y-2 text-xs text-muted-foreground">
+                <p>
+                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-[10px]">Problem · </span>
+                  {study.problem}
+                </p>
+                <p>
+                  <span className="font-semibold text-slate-500 uppercase tracking-wide text-[10px]">Solution · </span>
+                  {study.solution}
+                </p>
+                <p className="pt-2 border-t border-slate-100 font-medium text-foreground/80">{study.result}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );

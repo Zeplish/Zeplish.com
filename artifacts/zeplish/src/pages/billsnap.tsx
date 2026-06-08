@@ -9,8 +9,8 @@ export function BillSnapPage() {
         description: "Stop manually entering bills. BillSnap AI scans any receipt or invoice, extracts the data automatically, and exports to QuickBooks — saving hours every week.",
       }}
       hero={{
-        heroBg: "#1a0a3d",
-        ctaBg: "#1a0a3d",
+        heroBg: "#3b0fa0",
+        ctaBg: "#3b0fa0",
         badge: "AI-Powered · Any US Business",
         name: "BillSnap AI",
         tagline: "Bills Processed. Automatically.",
