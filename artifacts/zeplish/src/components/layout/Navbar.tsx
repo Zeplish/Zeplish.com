@@ -47,14 +47,7 @@ export function Navbar() {
 
   const handleCta = () => {
     setMobileOpen(false);
-    if (isHome) {
-      setTimeout(() => {
-        const el = document.getElementById("contact");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      window.location.href = "/#contact";
-    }
+    window.open("https://cal.com/zeplish/15min", "_blank", "noopener,noreferrer");
   };
 
   return (
