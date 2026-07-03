@@ -14,7 +14,6 @@ import {
   Clock,
   ClipboardList,
   Mail,
-  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/layout/Navbar";
@@ -558,35 +557,6 @@ export function DocTrackrPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Origin story ── */}
-      <section className="py-20 bg-[#1a2744] text-white">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-3 py-1 text-sm text-white/80 mb-8">
-              <Star className="h-3.5 w-3.5" />
-              Our story
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
-              Built after solving this exact problem for a Florida daycare
-            </h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-4">
-              DocTrackr was built for a Florida daycare center that needed a simpler way to track employee and student document expiry dates.
-            </p>
-            <p className="text-white/70 leading-relaxed mb-4">
-              Instead of managing everything manually, the center now has a system to organize records and send reminders before renewals are missed.
-            </p>
-            <p className="text-white/80 font-medium">
-              Now we are opening DocTrackr for other daycare centers that want the same simple system.
-            </p>
-          </motion.div>
         </div>
       </section>
 
