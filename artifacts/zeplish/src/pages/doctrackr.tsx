@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { motion } from "framer-motion";
 import {
   Bell,
@@ -182,6 +183,10 @@ export function DocTrackrPage() {
         "content",
         "DocTrackr helps Florida daycare centers track staff and student document expiry dates, send automatic renewal reminders, and stay inspection-ready. $199/month."
       );
+    (async () => {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
   }, []);
 
   return (
@@ -240,15 +245,13 @@ export function DocTrackrPage() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <a
-                  href={CAL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => { document.getElementById("book-demo")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-5 py-2.5 rounded-md font-medium text-sm group transition-colors"
                 >
                   Book a 15-minute demo
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </button>
                 <a
                   href={study.liveUrl}
                   target="_blank"
@@ -608,15 +611,13 @@ export function DocTrackrPage() {
                 ))}
               </div>
 
-              <a
-                href={CAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => { document.getElementById("book-demo")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="flex w-full items-center justify-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3.5 rounded-md font-medium text-sm group transition-colors"
               >
                 Book a 15-minute demo
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>
@@ -730,6 +731,54 @@ export function DocTrackrPage() {
               <FaqItem key={faq.q} q={faq.q} a={faq.a} />
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Inline Booking ── */}
+      <section id="book-demo" className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
+              Book a free 15-minute demo
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              See DocTrackr in action. Pick a time that works for you — no pressure, no commitment.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="rounded-2xl border overflow-hidden shadow-sm"
+          >
+            <Cal
+              namespace="15min"
+              calLink="zeplish/15min"
+              style={{ width: "100%", height: "700px", overflow: "scroll" }}
+              config={{ layout: "month_view" }}
+            />
+          </motion.div>
+
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            Prefer to open in a new tab?{" "}
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline inline-flex items-center gap-1"
+            >
+              Book on cal.com
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </p>
         </div>
       </section>
 
