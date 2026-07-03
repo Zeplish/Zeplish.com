@@ -152,8 +152,8 @@ function BrowserFrame({ img, alt, url }: { img: string; alt: string; url: string
         </div>
         <div className="flex-1 bg-white rounded text-[10px] text-slate-400 px-2 py-0.5 truncate">{url}</div>
       </div>
-      <div className="aspect-[16/10] overflow-hidden bg-slate-100">
-        <img src={img} alt={alt} className="w-full h-full object-cover object-top" />
+      <div className="bg-slate-100">
+        <img src={img} alt={alt} className="w-full h-auto block" />
       </div>
     </div>
   );
@@ -213,7 +213,7 @@ export function DocTrackrPage() {
             <span className="text-white/60">DocTrackr</span>
           </nav>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-end">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left */}
             <motion.div
               initial={{ opacity: 0, y: 28 }}
