@@ -60,7 +60,7 @@
     ]
   },
   "featuredCaseStudy": {
-    "badge": "Featured Case Study",
+    "badge": "Featured Product",
     "name": "DocTrackr",
     "subtitle": "Document expiry tracking system for a US-based daycare business.",
     "problem": "Documents tracked manually, expiry dates missed, staff compliance hard to monitor, follow-ups time-consuming.",

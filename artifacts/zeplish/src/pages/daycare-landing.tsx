@@ -101,7 +101,7 @@ export function DaycareLandingPage() {
                   onClick={() => { window.location.href = "/doctrackr"; }}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/20 text-white/80 hover:bg-white/10 transition-colors text-sm font-medium"
                 >
-                  View the DocTrackr case study
+                  View DocTrackr
                   <ChevronRight className="h-4 w-4" />
                 </button>
               </div>
@@ -215,7 +215,7 @@ export function DaycareLandingPage() {
             className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"
           >
             <div>
-              <div className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">Live Case Study</div>
+              <div className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">Live Product</div>
               <h3 className="text-xl font-bold font-heading mb-2">We already built this for a US daycare.</h3>
               <p className="text-white/70 text-sm max-w-lg">
                 DocTrackr is a live, deployed compliance system built by Zeplish for a US-based daycare. See exactly what was built, how it works, and what changed for the business.
@@ -225,7 +225,7 @@ export function DaycareLandingPage() {
               onClick={() => { window.location.href = "/doctrackr"; }}
               className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold text-sm hover:bg-white/90 transition-colors"
             >
-              View DocTrackr case study
+              View DocTrackr
               <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>
@@ -260,7 +260,7 @@ export function DaycareLandingPage() {
                 onClick={() => { window.location.href = "/doctrackr"; }}
                 className="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white transition-colors text-sm h-12"
               >
-                See the DocTrackr case study
+                See DocTrackr
                 <ChevronRight className="h-4 w-4" />
               </button>
             </div>
