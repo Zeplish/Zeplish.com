@@ -188,6 +188,7 @@ export function DocTrackrPage() {
     })();
   }, []);
 
+  const openCal = () => window.open(CAL_URL, "_blank", "noopener,noreferrer");
   const scrollToDemo = () => document.getElementById("book-demo")?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -243,7 +244,7 @@ export function DocTrackrPage() {
 
               <div className="flex flex-wrap gap-3">
                 <button
-                  onClick={scrollToDemo}
+                  onClick={openCal}
                   className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-lg font-semibold text-sm group transition-colors shadow-lg shadow-accent/25"
                 >
                   Book a 15-minute demo
@@ -482,14 +483,14 @@ export function DocTrackrPage() {
               </div>
 
               <button
-                onClick={scrollToDemo}
+                onClick={openCal}
                 className="flex w-full items-center justify-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3.5 rounded-lg font-semibold text-sm group transition-colors shadow-md shadow-accent/20"
               >
                 Book a 15-minute demo
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="text-center text-xs text-muted-foreground mt-3">
-                We'll walk you through setup on your first call.
+                We'll walk you through setup on your first call. No credit card required for the demo.
               </p>
             </div>
           </motion.div>
@@ -612,7 +613,7 @@ export function DocTrackrPage() {
               DocTrackr tracks documents, sends reminders, and keeps your daycare inspection-ready — all for less than $7/day.
             </p>
             <button
-              onClick={scrollToDemo}
+              onClick={openCal}
               className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-3.5 rounded-lg font-semibold text-sm group transition-colors shadow-lg shadow-accent/30"
             >
               Book a 15-minute demo
